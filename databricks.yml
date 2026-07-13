@@ -1,0 +1,29 @@
+bundle:
+  name: ecommerce
+
+workspace:
+  host: https://adb-7405616619070926.6.azuredatabricks.net
+
+
+resources:
+
+  jobs:
+
+    bronze_ingestion:
+
+      name: Bronze ingestion
+
+      tasks:
+
+        - task_key: ingest
+
+          notebook_task:
+
+            notebook_path: ./notebooks/copy_into.py
+sync:
+  exclude:
+    - ".git/**"
+    - ".github/**"
+    - ".vscode/**"
+    - "terraform/**"
+    - ".venv/**"
