@@ -1,5 +1,5 @@
 bundle:
-  name: ecommerce
+  name: danetalares
 
 workspace:
   host: https://adb-7405616619070926.6.azuredatabricks.net
@@ -9,9 +9,9 @@ resources:
 
   jobs:
 
-    bronze_ingestion:
+    siwy_pipeline:
 
-      name: Bronze ingestion
+      name: siwy pipeline
 
       tasks:
 
@@ -20,6 +20,8 @@ resources:
           notebook_task:
 
             notebook_path: ./notebooks/copy_into.py
+
+
 sync:
   exclude:
     - ".git/**"
